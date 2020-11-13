@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<title>TV Guide (based on TV MAZE)- About page</title>
+	<!-- include an external style sheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="style-v1.css">  		
+	<!-- include an external JavaScript file -->
+
+	<link rel="manifest" href="manifest.json">
+	<meta name ="theme-color" content="#FFE1C4">
+	<link rel="apple-touch-icon" href="icon-192-192.png">
+
+
+</head>
+
+<body>
+
+<div class = "frame_container">
+
+	<div class = "item_search_bar_left"></div>
+	<div class = "item_search_bar_middle">
+	
+		<div class="img_container"> <img src="tvm-header-logo.png" alt = "logo" class= "logo" ></div>
+		
+		<div class="search_container">
+			 <div class="search">
+				<input id="search_input" type="text" class="searchTerm" placeholder="Search Shows">
+				<button type="submit" class="searchButton" onclick="fetchData()">
+				  <i class="fa fa-search"></i>
+			   </button>
+			 </div>
+		 </div>
+	
+	</div>
+	<div class = "item_search_bar_right"></div>
+	
+	
+	<div class = "item_menu_bar_left"></div>
+	<div class = "item_menu_bar_middle">
+		<a href="index.html">BACK TO HOME</a>
+		<a href="#">ABOUT</a>
+	</div>
+	<div class = "item_menu_bar_right"></div>
+	
+	
+	
+	<div class = "item_body_bar_left"> </div>
+	<div class = "item_body_bar_middle">
+					<div id="main" class = "landing_container">
+						<div class = "item_landing_left">  </div>
+						<div class = "item_landing_middle">
+							<h1 class = "welcome">Welcome to my TV GUIDE</h1>
+							<ul class = "About_Text">
+								<li>
+									<p>Use the search bar to find a TV Show</p>
+								</li>
+
+								<li>
+									<p>Click the HOME link to get tonight's and tomorrow's popular shows as well as tonight's schedule</p>
+								</li>
+
+								<li>
+									<p>Click the SHOWS link to get all the shows that are listed in database of TV MAZE </p>
+								</li>
+
+								<li>
+									<p>Click the ABOUT link to land on this page</p>
+								</li>
+
+								<li>
+									<p>Click on the picture of a TV Show to land on page with Main Info, Episodes, Cast and Crew</p>
+								</li>
+
+							</ul>
+							<br>
+
+							<i class="fa fa-tv" style="font-size:10vw;color:#203864; "></i> 
+							
+							
+							<br><br><br>
+							<p>This APP uses  APIs provided by <a href="http://api.tvmaze.com"> TV Maze !</a><p>
+						</div>
+					
+				
+						<div class = "item_landing_right"> </div>
+						
+						
+						
+					</div>
+	</div>
+	<div class = "item_body_bar_right">
+	</div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var j;
+
+for (j = 0; j < coll.length; j++) {
+  coll[j].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var collapse_content = this.nextElementSibling;
+    if (collapse_content.style.display === "block") {
+      collapse_content.style.display = "none";
+    } else {
+      collapse_content.style.display = "block";
+    }
+  });
+}
+
+
+</script>
+</body>
+
+</html>
